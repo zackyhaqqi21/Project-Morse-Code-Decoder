@@ -1,0 +1,81 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-3" mainComp="false" Show_id="true" Show_Val="false" Pos="-60,-120" rotation="0" hflip="1" vflip="1" label="Uno-3" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="codingmorse.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Resistor" CircId="Resistor-12" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-188,24" rotation="0" hflip="1" vflip="1" label="Resistorled" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="220 Ω" />
+
+<item itemtype="Led" CircId="Led-16" mainComp="false" Show_id="false" Show_Val="false" Pos="-180,52" rotation="0" hflip="1" vflip="1" label="Led-16" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="AudioOut" CircId="AudioOut-17" mainComp="false" Show_id="false" Show_Val="false" Pos="12,-224" rotation="0" hflip="1" vflip="1" label="AudioOut-17" idLabPos="-20,-36" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="false" Impedance="8 Ω" Frequency="1 kHz" />
+
+<item itemtype="Switch" CircId="Switch-23" mainComp="false" Show_id="false" Show_Val="false" Pos="-252,-32" rotation="0" hflip="1" vflip="1" label="Switch-23" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" DT="false" Poles="1" />
+
+<item itemtype="Subcircuit" CircId="Real_Button-26" mainComp="false" Show_id="true" Show_Val="false" Pos="-332,-36" rotation="0" hflip="1" vflip="1" label="Real_Button-26" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="LedRgb" CircId="LedRgb-29" mainComp="false" Show_id="false" Show_Val="false" Pos="-304,-116" rotation="-180" hflip="1" vflip="1" label="LedRgb-29" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" CommonCathode="true" Threshold_R="2 V" MaxCurrent_R="30 mA" Resistance_R="1e-14 Ω" Threshold_G="2 V" MaxCurrent_G="30 mA" Resistance_G="1e-14 Ω" Threshold_B="2 V" MaxCurrent_B="30 mA" Resistance_B="1e-14 Ω" />
+
+<item itemtype="Subcircuit" CircId="AButton-38" mainComp="false" Show_id="true" Show_Val="false" Pos="-268,16" rotation="0" hflip="1" vflip="1" label="AButton-38" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0">
+<mainCompProps MainCompId="Push-1" Norm_Close="false" Poles="1" />
+</item>
+
+<item itemtype="Subcircuit" CircId="Real_Button-41" mainComp="false" Show_id="true" Show_Val="false" Pos="-348,-232" rotation="0" hflip="1" vflip="1" label="Real_Button-41" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Aip31068_i2c" CircId="Aip31068_i2c-44" mainComp="false" Show_id="true" Show_Val="false" Pos="-276,-188" rotation="0" hflip="1" vflip="1" label="Aip31068_i2c-44" idLabPos="70,-82" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2" Cols="16" Control_Code="62" Frequency="100 _kHz" />
+
+<item itemtype="Node" CircId="Node-18" mainComp="false" Pos="92,-32" />
+
+<item itemtype="Node" CircId="Node-28" mainComp="false" Pos="-52,16" />
+
+<item itemtype="Node" CircId="Node-32" mainComp="false" Pos="-52,16" />
+
+<item itemtype="Node" CircId="Node-39" mainComp="false" Pos="-52,16" />
+
+<item itemtype="Connector" uid="Connector-20" startpinid="Resistor-12-lPin" endpinid="Uno-3-13" pointList="-204,24,-204,-4,-176,-4,-176,8,-52,8" />
+
+<item itemtype="Connector" uid="Connector-21" startpinid="Resistor-12-rPin" endpinid="Led-16-rPin" pointList="-172,24,-148,24,-148,52,-164,52" />
+
+<item itemtype="Connector" uid="Connector-31" startpinid="AudioOut-17-lPin" endpinid="Uno-3-8" pointList="-4,-232,-52,-232,-52,-156,-96,-156,-96,-32,-52,-32" />
+
+<item itemtype="Connector" uid="Connector-33" startpinid="Led-16-lPin" endpinid="Node-18-0" pointList="-196,52,-196,120,92,120,92,-32" />
+
+<item itemtype="Connector" uid="Connector-34" startpinid="Node-18-2" endpinid="Uno-3-GND1" pointList="92,-32,92,-32" />
+
+<item itemtype="Connector" uid="Connector-43" startpinid="Real_Button-26-Q" endpinid="Uno-3-7" pointList="-292,-28,-292,-48,-52,-48" />
+
+<item itemtype="Connector" uid="Connector-44" startpinid="Real_Button-26-!Q" endpinid="Node-28-1" pointList="-292,-20,-292,68,-52,68,-52,16" />
+
+<item itemtype="Connector" uid="Connector-46" startpinid="Node-28-2" endpinid="Uno-3-GND2" pointList="-52,16,-52,16" />
+
+<item itemtype="Connector" uid="Connector-56" startpinid="LedRgb-29-Pin3" endpinid="Node-32-1" pointList="-320,-116,-320,-68,-212,-68,-212,-16,-136,-16,-136,16,-52,16" />
+
+<item itemtype="Connector" uid="Connector-58" startpinid="Node-32-2" endpinid="Node-28-0" pointList="-52,16,-52,16" />
+
+<item itemtype="Connector" uid="Connector-32" startpinid="AudioOut-17-rPin" endpinid="Node-18-1" pointList="-4,-224,-4,-156,100,-156,100,-32,92,-32" />
+
+<item itemtype="Connector" uid="Connector-60" startpinid="Switch-23-pinP0" endpinid="Uno-3-2" pointList="-268,-32,-268,-88,-52,-88" />
+
+<item itemtype="Connector" uid="Connector-71" startpinid="LedRgb-29-Pin2" endpinid="Uno-3-A0" pointList="-288,-124,-288,-168,124,-168,124,-64,92,-64" />
+
+<item itemtype="Connector" uid="Connector-72" startpinid="LedRgb-29-Pin1" endpinid="Uno-3-A1" pointList="-288,-116,-276,-116,-276,-164,120,-164,120,-72,92,-72" />
+
+<item itemtype="Connector" uid="Connector-73" startpinid="LedRgb-29-Pin0" endpinid="Uno-3-A2" pointList="-288,-108,-268,-108,-268,-160,116,-160,116,-80,92,-80" />
+
+<item itemtype="Connector" uid="Connector-86" startpinid="AButton-38-Q" endpinid="Uno-3-9" pointList="-228,24,-208,24,-208,-24,-52,-24" />
+
+<item itemtype="Connector" uid="Connector-87" startpinid="AButton-38-!Q" endpinid="Node-39-1" pointList="-228,32,-52,32,-52,16" />
+
+<item itemtype="Connector" uid="Connector-88" startpinid="Switch-23-switch0pinN" endpinid="Node-39-0" pointList="-236,-32,-124,-32,-124,16,-52,16" />
+
+<item itemtype="Connector" uid="Connector-89" startpinid="Node-39-2" endpinid="Node-32-0" pointList="-52,16,-52,16" />
+
+<item itemtype="Connector" uid="Connector-90" startpinid="Real_Button-41-Q" endpinid="Uno-3-A3" pointList="-308,-224,-308,-276,112,-276,112,-88,92,-88" />
+
+<item itemtype="Connector" uid="Connector-94" startpinid="Real_Button-41-!Q" endpinid="Uno-3-GND0" pointList="-308,-216,-292,-216,-292,-268,108,-268,108,-40,92,-40" />
+
+<item itemtype="Connector" uid="Connector-95" startpinid="Aip31068_i2c-44PinSDA" endpinid="Uno-3-4" pointList="-260,-180,-260,-72,-52,-72" />
+
+<item itemtype="Connector" uid="Connector-96" startpinid="Aip31068_i2c-44PinSCL" endpinid="Uno-3-5" pointList="-252,-180,-252,-64,-52,-64" />
+
+</circuit>
